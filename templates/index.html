@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datathon 2.0</title>
+    
+    <style>
+        body{
+            background-image: url('https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80');
+            background-repeat: no-repeat;
+           background-size: 1536px;
+        }
+        .heading{
+            color: white;
+            font-size: 40px;
+            }
+        .formy{
+            padding-top: 220px;
+            padding-left: 180px;
+        }
+        .container {
+          position: absolute;
+          top: 75%;
+        }
+        .button {
+          border: none;
+          display: block;
+          text-align: center;
+          cursor: pointer;
+          text-transform: uppercase;
+          outline: none;
+          overflow: hidden;
+          position: relative;
+          color: #eeeeee;
+          font-weight: 600;
+          font-size: 15px;
+          background-color: #153f00;
+          padding: 15px 50px;
+          margin: 0 auto;
+        }
+        .button span {
+          position: relative;
+          z-index: 1;
+        }
+        .button:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 470%;
+          width: 140%;
+          background: #52b71f;
+          -webkit-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out;
+          -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
+          transform: translateX(-100%) translateY(-25%) rotate(45deg);
+        }
+        .button:hover:after {
+          -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+          transform: translateX(-9%) translateY(-25%) rotate(45deg);
+        }
+      </style>
+</head>
+<body>
+    <div class="formy">
+    <form action="/" method="POST">
+        <div class="heading">
+          Phisning url prediction
+        </div>
+        <div class="texturl">
+            URL <br><br> &nbsp; <textarea rows="4" cols="30"  name="url" style="width: 320px;height: 100px;padding: 10px; border:3px dashed indigo;
+            background-color:aliceblue;"></textarea>
+        </div>
+        <br><br>
+        <div class="container">
+            <button type="submit" class="button">
+              <span>Test Here!</span>
+            </button><br><br>
+            <h1>{{pred}}</h1>
+        </div>
+    </form> 
+    </div>
+    <h1>{{pred}}</h1>
+</body>
+</html>
